@@ -10,9 +10,9 @@ Connecting to instance
 
 Internet connectivity
 
-Installation Steps 
+**Installation Steps** 
 
-1. Update System Packages 
+**1. Update System Packages **
 
 Sudo yum update –y 
 
@@ -32,13 +32,13 @@ sudo usermod -aG docker ec2-user
 
 Jenkins & Java Installation (Amazon Linux 2023) 
 
-Step 1: Install OpenJDK 17 
+**Step 1: Install OpenJDK 17 **
 
 sudo dnf install java-17-amazon-corretto -y 
 java --version 
  
 
-Step 2: Add Jenkins Repository & GPG Key 
+**Step 2: Add Jenkins Repository & GPG Key **
 
 sudo rpm --import https://pkg.jenkins.io/rpm-stable/jenkins.io-2026.key 
 
@@ -59,19 +59,18 @@ gpgkey=https://pkg.jenkins.io/rpm-stable/jenkins.io-2026.key
 EOF 
 . 
 
-Step 3: Install Jenkins 
+**Step 3: Install Jenkins **
 
 sudo dnf install jenkins -y 
 
- 
 
-Step 4: Start & Enable Jenkins 
+**Step 4: Start & Enable Jenkins **
 
 sudo systemctl start jenkins 
 sudo systemctl enable jenkins 
  
 
-Step 5: Docker Access for Jenkins 
+**Step 5: Docker Access for Jenkins **
 
 sudo usermod -aG docker jenkins 
 sudo systemctl restart jenkins 
